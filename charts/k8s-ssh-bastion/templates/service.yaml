@@ -11,7 +11,7 @@ spec:
   type: {{ .Values.service.type }}
   externalTrafficPolicy: Local
   ports:
-    - port: 22
+    - port: {{ .Values.service.port }}
       targetPort: ssh
       protocol: TCP
 {{- with .Values.service.nodePort }}

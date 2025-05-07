@@ -9,6 +9,7 @@ replicaCount: 1
 service:
   annotations: {}
   type: NodePort
+  port: 22
   nodePort: 30022
 
 resources:
