@@ -31,3 +31,4 @@ jobs:
           registry_username: ${{ github.actor }}
           registry_password: ${{ secrets.GITHUB_TOKEN}}
           tag: ${{ github.ref_name }}
+          app_version: ${{ github.ref_name }}
