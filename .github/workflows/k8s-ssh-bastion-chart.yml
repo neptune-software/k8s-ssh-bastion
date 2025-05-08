@@ -2,8 +2,6 @@ name: Release k8s-ssh-bastion chart
 
 on:
   push:
-    branches:
-      - main
     tags:
       - '*'
 
@@ -32,4 +30,4 @@ jobs:
           registry: ghcr.io
           registry_username: ${{ github.actor }}
           registry_password: ${{ secrets.GITHUB_TOKEN}}
-          tag: 0.1.0
+          tag: ${{ github.ref_name }}
