@@ -23,7 +23,10 @@ jobs:
         uses: azure/setup-helm@v4.3.0
 
       - name: Set versions
-        run: sed 's/<VERSION>/'${VERSION}'/' charts/k8s-ssh-bastion/Chart.yam
+        run: |
+          pwd
+          ls -a
+          sed 's/<VERSION>/'${VERSION}'/' charts/k8s-ssh-bastion/Chart.yam
         env:
           VERSION: ${{ github.ref_name }}
 
