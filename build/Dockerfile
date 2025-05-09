@@ -4,5 +4,5 @@ RUN apt update && apt install --no-install-recommends -y curl ca-certificates te
 RUN set -eux; \
     ARCH=$(dpkg --print-architecture); \
     \
-    curl -SL "https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_VERSION}/bin/linux/${ARCH}/kubectl" -o /usr/bin/kubectl; \
+    curl -SL "https://dl.k8s.io/release/${KUBECTL_VERSION}/bin/linux/${ARCH}/kubectl" -o /usr/bin/kubectl; \
     chmod +x /usr/bin/kubectl
